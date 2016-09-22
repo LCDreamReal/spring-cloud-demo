@@ -20,8 +20,8 @@ public class ConsumerController {
     ComputeClient computeClient;
 
     @RequestMapping(value = "/compute", method = RequestMethod.GET)
-    public String compute(){
+    public Integer compute(){
 
-        return computeClient.compute(10,20);
+        return computeClient.add(10,20);
     }
 }

@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "compute-service")
 public interface ComputeClient {
 
-    @RequestMapping(value = "/compute", method = RequestMethod.GET)
-    String compute(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
+    /**
+     * 和服务端RequestMapping和method保持一致
+     */
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    Integer add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
 }
