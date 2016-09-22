@@ -12,7 +12,8 @@
 		<module>spring-cloud-service(2)</module>
 		<module>spring-cloud-ribbon</module>
 		<module>spring-cloud-feign</module>
-	</modules>
+        <module>spring-cloud-zuul</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>spring-cloud-demo</name>
