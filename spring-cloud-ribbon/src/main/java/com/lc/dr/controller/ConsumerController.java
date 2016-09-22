@@ -1,5 +1,6 @@
 package com.lc.dr.controller;
 
+import com.lc.dr.service.ComputeService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +17,11 @@ import javax.annotation.Resource;
 public class ConsumerController {
 
     @Resource
-    RestTemplate restTemplate;
+    ComputeService computeService;
 
     @RequestMapping(value = "/compute", method = RequestMethod.GET)
     public String compute(){
 
-        return restTemplate.getForEntity("http://COMPUTE-SERVICE/add?a=10&b=20", String.class).getBody();
+        return computeService.compute();
     }
 }

@@ -24,8 +24,8 @@ public class ComputeController {
     private DiscoveryClient disClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b){
-
+    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
+//        throw new Exception();
         ServiceInstance instance = disClient.getLocalServiceInstance();
         Integer r = a + b;
         logger.info("/add, host:"+instance.getHost()+", serviceId:"+instance.getServiceId()+", result r:"+r);

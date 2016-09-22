@@ -1,5 +1,6 @@
 package com.lc.dr.intf;
 
+import com.lc.dr.hystrix.ComputeClientHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Author:   licheng
  * Datetime: 2016-09-21 17:57
  */
-@FeignClient(value = "compute-service")
+@FeignClient(value = "compute-service", fallback = ComputeClientHystrix.class)
 public interface ComputeClient {
 
     /**
