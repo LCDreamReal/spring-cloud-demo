@@ -14,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ComputeClient {
 
     @RequestMapping(value = "/compute", method = RequestMethod.GET)
-    String compute(@RequestParam Integer a, @RequestParam Integer b);
+    String compute(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
 }
