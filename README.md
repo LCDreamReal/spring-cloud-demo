@@ -7,6 +7,8 @@ http://bbs.springcloud.com.cn/
 
 http://docs.springcloud.cn/
 
+http://blog.xujin.org/sc/springcloud/
+
 https://github.com/Netflix/Hystrix/wiki/How-To-Use
 
 ## 江南白衣博客
