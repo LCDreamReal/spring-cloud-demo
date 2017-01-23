@@ -13,6 +13,7 @@
 		<module>spring-cloud-ribbon</module>
 		<module>spring-cloud-feign</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-config</module>
     </modules>
 	<packaging>pom</packaging>
 
